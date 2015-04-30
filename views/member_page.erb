@@ -1,0 +1,19 @@
+<div>
+	<h1>Welcome!</h1>
+	<div>
+		<form action="/member_page" method="POST">
+			<label for="title" type="text">Title</label>
+			<input type="text" name="[post]title">
+			<label for="body" type="text">Body</label>
+			<textarea type="text" name="[post]body"></textarea>
+			<input type="submit" value="Post"> 
+		</form>
+		<div>
+			<% @post.each do |p| %>
+			<h1><%= p.title %></h1>
+			<p><%= p.body %></p>
+			<% end %>
+		</div>
+	</div> 
+
+</div>

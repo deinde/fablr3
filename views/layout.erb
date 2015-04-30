@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fablr</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<% if current_user %>
+			<span> Welcome <%= current_user.username %></span>
+			<a href="/logout">Logout</a>
+			<% else %>
+			<a href="/">Login</a>
+			<a href="/sign_up">Sign Up</a>
+			<% end %>
+		</nav>
+	</header>
+	<div class="notice"><%= flash[:notice] if flash[:notice] %></div>
+	<div class="alert"><%= flash[:alert]%></div>
+	<%= yield %>
+</body>
+</html>
