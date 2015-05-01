@@ -1,5 +1,11 @@
-<div>
-	<h1>Welcome!</h1>
+<div id="hero-image">
+	<h1>Fablr</h1>
+	
+	
+</div>
+
+<div id="communityPostsForm">
+	<h1>Welcome <%= current_user.username %></h1>
 	<div>
 		<form action="/member_page" method="POST">
 			<label for="title" type="text">Title</label>
