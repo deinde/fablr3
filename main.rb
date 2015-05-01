@@ -69,6 +69,24 @@ get '/logout' do
 end 
 
 
+get '/follow/:id' do
+	@relationship = Relationship.new(follower_id: current_user.id, followed_id: params[:id])
+	if @relationship.save 
+		flash[:notice] = "succesfully followed"
+	else 
+		flash[:alert] = "Relationship was not saved."
+	end 
+	redirect back
+end 
+
+get '/profile_page' do
+	@users = User.all
+	erb :profile_page 
+end 
+
+get '/users/:id' do 
+	@user = User.find(params[:id])
+end 
 
 
 
