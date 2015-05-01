@@ -1,0 +1,28 @@
+#communityPosts{
+	margin-top: 10%;
+	color: white;
+}
+
+#communityPostsForm{
+	position: absolute;
+	margin-top: 5%;
+	color:white;
+}
+
+form{
+	margin-left: 0%;
+
+}
+
+#hero-image{
+	background-image: url('http://fc06.deviantart.net/fs21/f/2007/261/a/a/Fantasy_Mural__side_one_by_saeriellyn.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	margin-top: 5%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: -10;
+}
