@@ -55,6 +55,14 @@ post '/sign_up' do
 	redirect to('/member_page')
 end 
 
+
+get '/delete_account' do 
+	delete_user = User.find_by(id: current_user.id).destroy
+	session[:user_id] = nil
+	flash[:delete_notice] = "You have deleted your account"
+	redirect to('/')
+end 
+
 get '/logout' do 
 	session[:user_id] = nil
 	flash[:notice] = "You have logged out"
