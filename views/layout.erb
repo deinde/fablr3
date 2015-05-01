@@ -9,6 +9,7 @@
 			<% if current_user %>
 			<span> Welcome <%= current_user.username %></span>
 			<a href="/logout">Logout</a>
+			<a href="/delete_account">Delete Account</a>
 			<% else %>
 			<a href="/">Login</a>
 			<a href="/sign_up">Sign Up</a>
