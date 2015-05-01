@@ -55,7 +55,6 @@ post '/sign_up' do
 	redirect to('/member_page')
 end 
 
-
 get '/delete_account' do 
 	delete_user = User.find_by(id: current_user.id).destroy
 	session[:user_id] = nil
