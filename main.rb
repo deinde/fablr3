@@ -37,16 +37,19 @@ get '/sign_up' do
 	erb :sign_up
 end 
 
+# All Community Posts Form 
 get '/member_page' do
 	@post = Post.last(10)
 	# @user = User.all
 	erb :member_page
 end
 
+# Creates posts 
 post '/member_page' do
-	new_post = Post.create(params[:post])
+	new_post = Post.create(title: params[:post][:title],  body: params[:post][:body], user_id: current_user.id)
 	redirect to('/member_page')
 end 
+
 
 post '/sign_up' do 
 	new_user = User.create(params[:user])
@@ -68,7 +71,7 @@ get '/logout' do
 	redirect to('/')
 end 
 
-
+# Creates a unique profile page id 
 get '/follow/:id' do
 	@relationship = Relationship.new(follower_id: current_user.id, followed_id: params[:id])
 	if @relationship.save 
@@ -77,6 +80,13 @@ get '/follow/:id' do
 		flash[:alert] = "Relationship was not saved."
 	end 
 	redirect back
+end 
+
+get '/user_profile/:id' do 
+	@user = User.find(params[:id])
+  	@posts = @user.posts
+	erb :user_profile
+
 end 
 
 get '/profile_page' do
@@ -88,6 +98,19 @@ get '/users/:id' do
 	@user = User.find(params[:id])
 end 
 
+get '/edit' do 
+	erb :edit
+end  
+
+post '/edit' do
+	@edit_user = current_user
+	    # binding.pry
+	@edit_user.update(username: params[:user][:username],password: params[:user][:password], email: params[:user][:email])
+	session[:user_id] = @edit_user.id
+	flash[:notice] = "You have changed your credentials"
+	User.find(session[:user_id])
+	redirect to('/edit')
+end
 
 
 

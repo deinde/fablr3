@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="home.css">
 	<link rel="stylesheet" type="text/css" href="member_page.css">
 	<link rel="stylesheet" type="text/css" href="sign_up.css">
+	<link rel="stylesheet" type="text/css" href="edit.css">
+	<link rel="stylesheet" type="text/css" href="user_profile.css">
+	<link rel="stylesheet" type="text/css" href="profile_page.css">
 </head>
 <body>
 	<header>
@@ -13,7 +16,9 @@
 			<% if current_user %>
 			
 			<a href="/logout">Logout</a>
+			<a href="/edit">Edit</a>
 			<a href="/delete_account">Delete Account</a>
+			<a href="/profile_page">Community</a>	
 			<% else %>
 			<a href="/">Login</a>
 			<a href="/sign_up">Sign Up</a>
@@ -27,8 +32,8 @@
 			<% end %>
 		</nav>
 	</header>
-<!-- 	<div class="notice"><%= flash[:notice] if flash[:notice] %></div>
-	<div class="alert"><%= flash[:alert]%></div> -->
+	<div class="notice" id="flash1"><%= flash[:notice] if flash[:notice] %></div>
+	<div class="alert" id="flash2"><%= flash[:alert]%></div>
 	<%= yield %>
 </body>
 </html>

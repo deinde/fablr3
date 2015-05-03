@@ -1,8 +1,10 @@
-<h1>Users</h1>
-<ol>
-<% @users.each do |user|%>
-<li><%= user.username %></li> <a href="/follow/<%= user.id %>">Follow</a> 
-<% end %>
-</ol>
+<div>
+	<h1> Fablrs' Circle </h1>
+	<ol>
+	<% @users.each do |user|%>
+	<li><a href="/user_profile/<%= user.id %>"><%= user.username %></a> <a href="/follow/<%= user.id %>">Follow</a> </li>
+	<% end %>
+	</ol>
+<div
 
 
