@@ -1,23 +1,32 @@
-
+<div class="welcome-text member-text-margin">
 	<h1>Fablr</h1>
-
-
-<div id="communityPostsForm">
 	<h1>Welcome <%= current_user.username %></h1>
-	<div>
-		<form action="/member_page" method="POST">
-			<label for="title" type="text">Title</label>
-			<input type="text" name="[post]title">
-			<label for="body" type="text">Body</label>
-			<textarea type="text" name="[post]body"></textarea>
-			<input type="submit" value="Post"> 
-		</form>
-		<div>
-			<% @post.each do |p| %>
-			<h1><%= p.title %></h1>
-			<p><%= p.body %></p>
-			<% end %>
-		</div>
-	</div> 
-
 </div>
+<div class="member-wrapper">
+	<form class="member-form" action="/member_page" method="POST">
+		<ul>
+			<li>
+		<label for="title" type="text">Title</label>
+	</li>
+	<li>
+		<input type="text" name="[post]title">
+	</li>
+	<li>
+		<label for="body" type="text">Body</label>
+	</li>
+	<li>
+		<textarea type="text" name="[post]body" cols="40" rows="15" ></textarea>
+	</li>
+	<li>
+		<input class="post-button" type="submit" name="post" value=" post! "> 
+	</li>
+</ul>
+	</form>
+</div>
+<div class="prev-post-wrapper">
+	<% @post.each do |p| %>
+		<h3><%= p.title %></h3>
+		<p><%= p.body %></p>
+	<% end %>
+</div>
+

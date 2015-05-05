@@ -11,16 +11,17 @@
 	<header>
 		<nav>
 			<% if current_user %>
-			
-			<a href="/logout">Logout</a>
-			<a href="/edit">Edit</a>
-			<a href="/delete_account">Delete Account</a>
-			<a href="/profile_page">Community</a>	
-			<% else %>
 			<div class="login-signup-text">
-				<a href="/">Login</a>
-				<a href="/sign_up">Sign Up</a>
+				<a href="/logout">Logout</a>
+				<a href="/edit">Edit</a>
+				<a href="/delete_account">Delete Account</a>
+				<a href="/profile_page">Community</a>	
 			</div>
+			<% else %>
+				<div class="login-signup-text">
+					<a href="/">Login</a>
+					<a href="/sign_up">Sign Up</a>
+				</div>
 			<form action="/login" method="POST" id="loginForm">
 				<div class="form-wrapper">
 					<ul>
@@ -35,13 +36,12 @@
 						</li>
 							<input type="password" name="password" placeholder="Password">
 						</li>
-						<li>
-							<!-- <input  id="button" type="submit" value="Log In"> --> 
-
-						</li>
+						<!-- old button: <li>
+							<input  id="button" type="submit" value="Log In"> 
+						</li> -->
 					</ul>
 				</div> 
-				<input id="button" type="image" src="submit.png" width="76" height="auto">	
+				<input id="button" type="image" src="submit.png" width="60" height="auto">	
 			</form>
 			<% end %>
 		</nav>

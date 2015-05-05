@@ -1,14 +1,13 @@
 
-	<h1>Fablr</h1>	
+<h1>Fablr</h1>	
 
-<form action="/sign_up" method="POST" id="sign_up">
-	<!-- Name --> 
-	<label for="username">Username</label>
-	<input type="text" name="[user]username" placeholder="name" required>
-	<!-- Password -->
-	<label for="password"></label>
-	<input type="password" name="[user]password" placeholder="password" required>
-	<!-- Button --> 
-	<input type="submit" name="submit" value="Sign Up">
-</form>
+<div class="sign-up-wrapper">
+	<form action="/sign_up" method="POST" id="sign_up">
+		<label for="username">Username</label>
+		<input type="text" name="[user]username" placeholder="choose a username" required>
+		<label for="password">Password</label>
+		<input type="password" name="[user]password" placeholder="choose a password" required>
+		<input class="sign-up-button" type="submit" name="submit" value=" Sign Up ">
+	</form>
+</div>
 
