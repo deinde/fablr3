@@ -3,14 +3,11 @@
 <head>
 	<title>Fablr</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="stylesheet" type="text/css" href="home.css">
-	<link rel="stylesheet" type="text/css" href="member_page.css">
-	<link rel="stylesheet" type="text/css" href="sign_up.css">
-	<link rel="stylesheet" type="text/css" href="edit.css">
-	<link rel="stylesheet" type="text/css" href="user_profile.css">
-	<link rel="stylesheet" type="text/css" href="profile_page.css">
+	<script type="text/javascript" src="/jquery-2.1.3.js"></script>
+	<script type="text/javascript" src="/script.js"></script>
 </head>
 <body>
+	<div id="hero-image" >
 	<header>
 		<nav>
 			<% if current_user %>
@@ -20,14 +17,31 @@
 			<a href="/delete_account">Delete Account</a>
 			<a href="/profile_page">Community</a>	
 			<% else %>
-			<a href="/">Login</a>
-			<a href="/sign_up">Sign Up</a>
+			<div class="login-signup-text">
+				<a href="/">Login</a>
+				<a href="/sign_up">Sign Up</a>
+			</div>
 			<form action="/login" method="POST" id="loginForm">
-				<label for="username" type="text">Username</label>
-				<input type="text" name="username" placeholder="Userame" required>
-				<label for="password" type="text">Password</label>
-				<input type="password" name="password" placeholder="Password">
-				<input type="submit" value="Log In">  	
+				<div class="form-wrapper">
+					<ul>
+						<li>
+							<label for="username" type="text">Username</label>
+						</li>
+						<li>
+							<input type="text" name="username" placeholder="Username" required>
+						</li>
+						<li>
+							<label for="password" type="text">Password</label>
+						</li>
+							<input type="password" name="password" placeholder="Password">
+						</li>
+						<li>
+							<!-- <input  id="button" type="submit" value="Log In"> --> 
+
+						</li>
+					</ul>
+				</div> 
+				<input id="button" type="image" src="submit.png" width="76" height="auto">	
 			</form>
 			<% end %>
 		</nav>

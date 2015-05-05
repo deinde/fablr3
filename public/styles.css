@@ -1,38 +1,138 @@
 body{
 	background-color: aqua;
+	margin: 0px;
+	margin: 0px;
+}
+
+form{
+	color: white;
+	margin-top: 0%;
+	padding: 10px 20px;
+}
+
+header {
+	margin: 0px;
+	height: 15%
 }
 
 nav{
-	position: absolute;
-	top: 0;
-	left: 0;
+	margin: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	width: 100%;
-	height: 15%;
 	background-color: purple;
 	color: white;
-	z-index: -10;
+	z-index: 10;
+	box-shadow: 2px 0px 15px white;
 }
-
 
 nav a{
 	text-decoration: none;
 	color:white;
 	font-size: 1.5em;
-	padding-top:1000px;
-
 }
 
-a{
-	margin-left: 20px;
+nav ul {
+	display: block;
+}
 
+nav li {
+	display: inline-block;
+	text-decoration: none;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+a {
+	transition: all 0.3s ease-in;
+}
+
+a:hover {
+	-webkit-stroke-width: 5.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 1px 0px 20px yellow;
+}
+
+.welcome-text, .login-signup-text {
+	text-shadow: 2px 0px 10px black;
+}
+
+.form-wrapper {
+	position: absolute;
+	right: 100px;
+	top: 10px;
+}
+
+.login-signup-text {
+	margin-left: 40px;
+}
+
+.login-signup-text a {
+	padding-right: 20px;
+}
+
+#sign_up{
+	position: absolute;
+	margin-top: 12%;
+	margin-left:34%;
+}
+
+#communityPosts{
+	margin-top: 10%;
+	color: white;
+}
+
+#communityPostsForm{
+	position: absolute;
+	margin-top: 5%;
+	color:white;
 }
 
 #loginForm{
 	margin-top: -1%;
-	margin-left: 58%;
+	margin-left: 28%;
 }
 
 #flash1{
 	margin-left: 20%;
 	color: green;
 }
+
+#hero-image{
+	background-image: url('bg.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	margin-top: 3%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+#hero-image h1{
+	color:white;
+	text-align: center;
+	margin-top: 2%;
+	font-size: 4em;
+}
+
+#hero-image p{
+	text-align: center;
+	color: white;
+	margin-top: -2%;
+	font-size: 2em;
+}
+
+#button {
+	position: absolute;
+	right: 25px;
+	top: -1px;
+}
+
+#button:hover {
+	opacity: .7;
+}
+
+
