@@ -1,10 +1,120 @@
-body{
+body {
 	background-color: aqua;
 	margin: 0px;
 	margin: 0px;
 }
 
-form{
+.F-button {
+	background-image: url(fablr-logo.png);
+	background-color: transparent;
+	background-size: cover;
+	height: 75px;
+	width: 75px;
+	border: 0;
+	position: absolute;
+	right: 20px;
+	top: 1px;
+}
+
+.F-button:hover {
+	opacity: .8;
+}
+
+#hero-image {
+	background-image: url('bg.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	margin-top: 3%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+#hero-image h1 {
+	color:white;
+	text-align: center;
+	margin-top: 2%;
+	font-size: 4em;
+}
+
+#hero-image p {
+	text-align: center;
+	color: white;
+	margin-top: -2%;
+	font-size: 2em;
+}
+
+.alert {
+	color: white;
+	text-shadow: 1px 0px 20px yellow;
+}
+
+#flash-center {
+	display: block;
+	text-align: center;
+}
+
+/******************************************/
+/** Homepage Menu *************************/
+/******************************************/
+ 
+
+.login-signup-text {
+	margin-left: 40px;
+}
+
+.login-signup-text a {
+	padding-right: 20px;
+}
+
+#loginForm {
+	margin-top: -1%;
+	margin-left: 28%;
+}
+
+
+/*********** logo fade *************/
+
+#cf {
+	position: relative;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+}
+
+@keyframes cfFadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+
+}
+
+#cf img.top {
+animation-name: cfFadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+}
+
+/***************************/
+
+
+
+form {
 	color: white;
 	margin-top: 0%;
 	padding: 10px 20px;
@@ -15,7 +125,7 @@ header {
 	height: 15%
 }
 
-nav{
+nav {
 	margin: 0px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -26,7 +136,7 @@ nav{
 	box-shadow: 2px 0px 15px white;
 }
 
-nav a{
+nav a {
 	text-decoration: none;
 	color:white;
 	font-size: 1.5em;
@@ -49,9 +159,9 @@ a {
 
 a:hover {
 	-webkit-stroke-width: 5.3px;
-      -webkit-stroke-color: #FFFFFF;
-      -webkit-fill-color: #FFFFFF;
-      text-shadow: 1px 0px 20px yellow;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px yellow;
 }
 
 .welcome-text, .login-signup-text {
@@ -64,36 +174,64 @@ a:hover {
 	top: 10px;
 }
 
+/******************************************/
+/** Member Page Form **********************/
+/******************************************/
+
+
 .member-text-margin h1 {
 	margin-bottom: 20px;
 }
 
 .member-wrapper {
 	display: block;
-
 }
 
 .member-form {
-	width: 300px;
+	width: 230px;
 	height: 350px;
 	margin: 0px auto;
+	padding: 10px;
 	font-size: 1.4em;
 	text-shadow: 0px 5px 3px white;
 	background-color: white;
 	opacity: .5;
 	border-radius: 10px;
 	color: purple;
-	padding: 20px;
 }
 
-.member-form li {
-	display: block;
-	padding: 5px 0px;
+/*.member-form p {
+	padding: 10px 0px;
+}*/
+
+.member-form p {
+	margin-bottom: 0px;
 }
 
-.member-form ul {
-	margin-top: 0px;
-	padding-left: 15px;
+.member-form label {
+	color: purple;
+	font-size: .7em;
+	opacity: 1;
+}
+
+.member-form {
+	border-radius: 5px;
+	border: 1px solid purple;
+}
+
+.title-label {
+	border: solid 1px purple;
+}
+
+.member-input {
+	font-size: .7em;
+}
+
+.text-area {
+	width: 220px;
+	border-radius: 5px;
+	border: 1px solid purple;
+	margin-bottom: 10px;
 }
 
 .prev-post-wrapper {
@@ -102,9 +240,29 @@ a:hover {
 	margin: 0px auto;
 }
 
-#sign_up {
-	margin: 0px auto;
+.post-button {
+	display: block;
+	color: purple;
+	opacity: 1;
+	border: 4px solid purple;
+	border-radius: 15px;
+	line-height: 20px;
+	transition: all 0.3s ease-in;
 }
+
+.post-button:hover {
+	color: white;
+	-webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 3px 0px 20px yellow;
+}
+
+
+/*****************************************/
+/**** Sign Up ****************************/
+/*****************************************/
+
 
 .sign-up-wrapper {
 	display: block;
@@ -134,18 +292,24 @@ a:hover {
 }
 
 
-.post-button {
-	display: block;
-	text-align: center;
-	color: purple;
-	opacity: 1;
-	border: 4px solid purple;
-	border-radius: 15px;
-	line-height: 20px;
+/******************************************/
+/** Profile Page **************************/
+/******************************************/
+
+.profile-page-list {
+	float: left;
+	margin-left: 50px;
+	color: white;
+}
+
+.profile-page-list a {
+	color: white;
+	text-decoration: none;
+	font-size: 2em;
 	transition: all 0.3s ease-in;
 }
 
-.post-button:hover {
+.profile-page-list:hover {
 	color: white;
 	-webkit-stroke-width: 5.3px;
   -webkit-stroke-color: #FFFFFF;
@@ -153,61 +317,19 @@ a:hover {
   text-shadow: 3px 0px 20px yellow;
 }
 
-/**** homepage menu: ****/ 
 
-.login-signup-text {
-	margin-left: 40px;
-}
 
-.login-signup-text a {
-	padding-right: 20px;
-}
-/****/ 
 
-#loginForm{
-	margin-top: -1%;
-	margin-left: 28%;
-}
 
-#flash1{
-	margin-left: 20%;
-	color: green;
-}
 
-#hero-image{
-	background-image: url('bg.jpg');
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	margin-top: 3%;
-	position: absolute;
-	top:0;
-	left:0;
-}
 
-#hero-image h1{
-	color:white;
-	text-align: center;
-	margin-top: 2%;
-	font-size: 4em;
-}
 
-#hero-image p{
-	text-align: center;
-	color: white;
-	margin-top: -2%;
-	font-size: 2em;
-}
 
-#button {
-	position: absolute;
-	right: 25px;
-	top: 7px;
-}
 
-#button:hover {
-	opacity: .7;
-}
+
+
+
+
+
 
 

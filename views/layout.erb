@@ -41,13 +41,20 @@
 						</li> -->
 					</ul>
 				</div> 
-				<input id="button" type="image" src="submit.png" width="60" height="auto">	
+			<!-- 	<div id="button">
+					<div id="cf"> -->
+						<input type="submit" class="F-button" name="submit" value="" >
+					<!-- 	<img class="bottom"src="fablr-logo-hover.png" width="60" height="auto" />	 -->
+				<!-- 	</div>
+				</div> -->
 			</form>
 			<% end %>
 		</nav>
 	</header>
-	<div class="notice" id="flash1"><%= flash[:notice] if flash[:notice] %></div>
-	<div class="alert" id="flash2"><%= flash[:alert]%></div>
+	<div id="flash-center">
+		<div id="flash-notice"><%= flash[:notice] if flash[:notice] %></div>
+		<div class="alert" id="flash2"><%= flash[:alert]%></div>
+	</div>
 	<%= yield %>
 </body>
 </html>
